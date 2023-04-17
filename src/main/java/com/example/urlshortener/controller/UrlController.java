@@ -16,9 +16,7 @@ import static com.example.urlshortener.message.ErrorMessages.INVALID_URL;
 
 @RestController
 @RequestMapping("/api")
-@RequiredArgsConstructor
 public class UrlController {
-
     @Autowired
     UrlServiceImpl urlService;
 

@@ -6,7 +6,6 @@ import com.example.urlshortener.exception.ExpirationDateException;
 import com.example.urlshortener.repository.UrlRepository;
 import com.example.urlshortener.utils.Utils;
 import jakarta.persistence.EntityNotFoundException;
-import lombok.Data;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +19,6 @@ import static com.example.urlshortener.message.ErrorMessages.URL_EXPIRED;
 import static com.example.urlshortener.message.ErrorMessages.URL_NOT_FOUND;
 
 @Service
-@Data
 public class UrlServiceImpl implements UrlService{
     @Autowired
     private UrlRepository urlRepository;
