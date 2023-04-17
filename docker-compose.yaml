@@ -1,0 +1,27 @@
+version: "3"
+services:
+  database:
+    image: "postgres:15-alpine"
+    container_name: urlShortener-Database
+    volumes:
+      - urlShortener-data:/var/lib/postgresql/data
+    ports:
+      - '5432:5432'
+    environment:
+      - POSTGRES_USER=urlShortener
+      - POSTGRES_PASSWORD=urlShortener
+      - POSTGRES_DB=urlShortener
+
+  api:
+    build:
+      context: .
+      dockerfile: api.Dockerfile
+    container_name: ulrShortener
+    environment:
+      - DB_SERVER= database
+    ports:
+      - "8080:8080"
+    links:
+      - database
+volumes:
+  urlShortener-data:
