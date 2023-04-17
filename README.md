@@ -1,10 +1,10 @@
 # urlShortener
 url shortener project for technical test
 
-#Prerequisites
+# Prerequisites
 Have Docker installed on your PC
 
-#Project Launch
+# Project Launch
 Open a terminal at the root of the project
 Run the command: docker-compose up
 
